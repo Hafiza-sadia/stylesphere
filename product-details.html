@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSphere | Product Details</title>
+    <meta name="description" content="Detailed review and affiliate link for this verified Amazon product.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-gallery {
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            max-width: 500px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .product-info {
+            padding-left: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 30px 0;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-list i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .sticky-summary {
+            position: sticky;
+            top: 100px;
+        }
+
+        @media (max-width: 900px) {
+            .details-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .product-info {
+                padding-left: 0;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="deals.html">Deals 🔥</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BACK NAV -->
+    <div class="container" style="padding-top: 40px;">
+        <a href="javascript:history.back()" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back to Products</a>
+        <a href="index.html" style="margin-left: 15px; color: var(--text-secondary); text-decoration: underline; font-size: 0.95rem;">Or go to Home</a>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <section class="container" style="padding: 40px 0 150px;">
+        <div id="product-container" class="details-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px;">
+            <!-- Content will be injected by JS -->
+            <div style="text-align: center; grid-column: 1 / -1; padding: 100px 0;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 3rem; color: var(--primary);"></i>
+                <h2 style="margin-top: 20px;">Loading Product Details...</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="footer-logo-img"></a>
+                    <p>Your ultimate guide to the best products on Amazon. We curate, so you don't have to search.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop All</a>
+                        <a href="deals.html">Daily Deals</a>
+                        <a href="categories.html">Categories</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Me</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclosure">
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+                <p style="margin-top: 10px;">&copy; 2026 StyleSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById('product-container');
+            
+            // Get product ID from URL query string
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            // Find product matching the ID, or fallback to the first product if none specified (for demo purposes)
+            let product = products.find(p => p.id === productId);
+            
+            if (!product) {
+                // Fallback for development if loaded directly without ID
+                product = products[0];
+            }
+
+            if (product) {
+                const oldPriceHtml = product.oldPrice ? `<span class="price-old" style="margin-left: 15px;">$${product.oldPrice}</span>` : '';
+                
+                // Document Title
+                document.title = `StyleSphere | ${product.name}`;
+
+                container.innerHTML = `
+                    <div class="product-gallery">
+                        ${product.tag ? `<div class="badge ${product.badgeClass}" style="font-size: 1rem; padding: 8px 20px;">${product.tag}</div>` : ''}
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <div class="sticky-summary">
+                            <span style="color: var(--primary); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">${product.category}</span>
+                            <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary); margin: 16px 0; line-height: 1.2;">${product.name}</h1>
+                            
+                            <div class="rating" style="font-size: 1.2rem; margin-bottom: 24px;">
+                                ${generateStars(product.rating)}
+                                <span class="rating-count" style="font-size: 1.1rem; margin-left: 8px;">(${product.reviewCount} Reviews)</span>
+                            </div>
+                            
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 30px; display: flex; align-items: baseline;">
+                                $${product.price}
+                                ${oldPriceHtml}
+                            </div>
+                            
+                            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
+                                ${product.desc}
+                            </p>
+                            
+                            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">Key Features</h3>
+                            <ul class="feature-list">
+                                ${product.features.map(f => `<li><i class="fas fa-check-circle"></i><span>${f}</span></li>`).join('')}
+                            </ul>
+                            
+                            <div style="margin-top: 40px; padding: 30px; background: white; border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow-lg);">
+                                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px;">Ready to buy?</h3>
+                                <a href="${product.amazonLink}" target="_blank" rel="nofollow sponsored" class="btn-amazon" style="width: 100%; font-size: 1.2rem; padding: 20px;">
+                                    <i class="fab fa-amazon" style="font-size: 1.5rem;"></i> Buy Now on Amazon
+                                </a>
+                                <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-top: 16px;"><i class="fas fa-shield-alt"></i> Redirects safely to Amazon.com</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div style="text-align: center; grid-column: 1 / -1; padding: 100px 0;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 4rem; color: var(--text-secondary); margin-bottom: 20px;"></i>
+                        <h2 style="font-size: 2rem; color: var(--text-primary);">Product Not Found</h2>
+                        <p style="margin: 20px 0 40px; color: var(--text-secondary); font-size: 1.2rem;">The product you're looking for doesn't exist or has been removed.</p>
+                        <a href="shop.html" class="btn-primary">Return to Shop</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

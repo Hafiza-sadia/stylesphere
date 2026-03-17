@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSphere | Contact Us</title>
+    <meta name="description" content="Get in touch with the StyleSphere team for questions, feedback, or support.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="deals.html">Deals 🔥</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="section-padding" style="background: var(--light); padding: 80px 0 40px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Get in <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Touch</span></h1>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; margin-bottom: 30px;">Have a question about a product or want to suggest a new curation? We'd love to hear from you.</p>
+            <a href="index.html" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 60px 0 150px; max-width: 800px;">
+        <div style="background: white; padding: 50px; border-radius: 30px; box-shadow: var(--shadow-xl); border: 1px solid var(--border); display: grid; grid-template-columns: 1fr 2fr; gap: 50px;">
+            
+            <!-- Contact Info -->
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <div>
+                    <h4 style="color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Email Us</h4>
+                    <p style="font-size: 1.1rem; font-weight: 600;"><i class="fas fa-envelope" style="color: var(--primary); margin-right: 8px;"></i> hello@stylesphere.com</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Follow Us</h4>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <a href="#" style="background: var(--light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary); transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="background: var(--light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary); transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="background: var(--light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary); transition: 0.3s;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-primary);">Your Name</label>
+                    <input type="text" placeholder="John Doe" required style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--light); font-family: inherit; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-primary);">Your Email</label>
+                    <input type="email" placeholder="john@example.com" required style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--light); font-family: inherit; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-primary);">Message</label>
+                    <textarea placeholder="How can we help you?" rows="5" required style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--light); font-family: inherit; font-size: 1rem; outline: none; resize: vertical; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="footer-logo-img"></a>
+                    <p>Your ultimate guide to the best products on Amazon. We curate, so you don't have to search.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop All</a>
+                        <a href="deals.html">Daily Deals</a>
+                        <a href="categories.html">Categories</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Me</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclosure">
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+                <p style="margin-top: 10px;">&copy; 2026 StyleSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

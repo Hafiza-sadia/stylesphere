@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSphere | Shop All Products</title>
+    <meta name="description" content="Browse our complete collection of curated, top-rated Amazon products across tech, home, and fashion.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop All</a></li>
+                <li><a href="deals.html">Deals 🔥</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SHOP HEADER -->
+    <header class="section-padding" style="background: var(--light); padding: 80px 0 40px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Shop <span style="color: var(--primary);">Collection</span></h1>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Discover the absolute best products, vetted by our experts.</p>
+        </div>
+    </header>
+
+    <!-- CONTROLS & PRODUCTS -->
+    <section class="container" style="padding-bottom: 100px;">
+        <!-- Filters Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <i class="fas fa-filter" style="color: var(--primary);"></i>
+                <span style="font-weight: 600;">Filter by:</span>
+                <select id="category-filter" style="padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--light); font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer;">
+                    <option value="all">All Categories</option>
+                    <!-- Categories will be injected here -->
+                </select>
+            </div>
+            <div style="font-size: 0.95rem; color: var(--text-secondary);">
+                Showing all <span id="product-count" style="font-weight: 700; color: var(--text-primary);">0</span> products
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid margin-bottom: 40px;" id="shop-products-grid">
+            <!-- Products will be injected here by JS -->
+        </div>
+        
+        <!-- Empty State (Hidden) -->
+        <div id="empty-state" style="display: none; text-align: center; padding: 60px 0;">
+            <i class="fas fa-box-open" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 20px;"></i>
+            <h3>No products found in this category.</h3>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="footer-logo-img"></a>
+                    <p>Your ultimate guide to the best products on Amazon. We curate, so you don't have to search.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop All</a>
+                        <a href="deals.html">Daily Deals</a>
+                        <a href="categories.html">Categories</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Me</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclosure">
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+                <p style="margin-top: 10px;">&copy; 2026 StyleSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="products.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById('shop-products-grid');
+            const filterSelect = document.getElementById('category-filter');
+            const countDisplay = document.getElementById('product-count');
+            const emptyState = document.getElementById('empty-state');
+
+            // 1. Render filter options
+            const uniqueCategories = [...new Set(products.map(p => p.category))];
+            uniqueCategories.forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat;
+                opt.textContent = cat;
+                filterSelect.appendChild(opt);
+            });
+
+            // 2. Render initial products
+            function renderProducts(items) {
+                if (items.length === 0) {
+                    grid.style.display = 'none';
+                    emptyState.style.display = 'block';
+                } else {
+                    grid.style.display = 'grid';
+                    emptyState.style.display = 'none';
+                    grid.innerHTML = items.map(p => createProductCard(p)).join('');
+                }
+                countDisplay.textContent = items.length;
+            }
+
+            // 3. Handle Initial Load Filter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialCategory = urlParams.get('category');
+            
+            if (initialCategory && uniqueCategories.includes(initialCategory)) {
+                filterSelect.value = initialCategory;
+                const filtered = products.filter(p => p.category === initialCategory);
+                renderProducts(filtered);
+            } else {
+                renderProducts(products);
+            }
+
+            // 4. Handle Filtering changes
+            filterSelect.addEventListener('change', (e) => {
+                const cat = e.target.value;
+                if (cat === 'all') {
+                    renderProducts(products);
+                } else {
+                    const filtered = products.filter(p => p.category === cat);
+                    renderProducts(filtered);
+                }
+                
+                // Update URL to match current state (improves sharing/bookmarking)
+                const newUrl = cat === 'all' 
+                    ? window.location.pathname 
+                    : window.location.pathname + '?category=' + encodeURIComponent(cat);
+                window.history.replaceState({}, '', newUrl);
+            });
+        });
+    </script>
+</body>
+</html>

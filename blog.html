@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSphere | Buying Guides & Blog</title>
+    <meta name="description" content="Expert buying guides, reviews, and styling tips from the StyleSphere team.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .read-more:hover {
+            color: var(--primary-hover);
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="deals.html">Deals 🔥</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="section-padding" style="background: var(--light); padding: 80px 0 40px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">Expert <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Buying Guides</span></h1>
+            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; margin-bottom: 30px;">Deep dives, product comparisons, and top 10 lists to help you make the best purchase decisions.</p>
+            <a href="index.html" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <section class="container section-padding" style="padding-bottom: 150px;">
+        <div class="grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-card">
+                <div style="overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Work from home setup">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Oct 24, 2026</span>
+                        <span><i class="far fa-folder"></i> Tech Guides</span>
+                    </div>
+                    <h3 class="blog-title">The Ultimate Work-From-Home Desk Setup</h3>
+                    <p class="blog-excerpt">Discover the top 10 ergonomic and productivity-boosting accessories you need for your home office this year.</p>
+                    <a href="#" class="read-more">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card">
+                <div style="overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800" alt="Skincare routine">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Oct 18, 2026</span>
+                        <span><i class="far fa-folder"></i> Beauty</span>
+                    </div>
+                    <h3 class="blog-title">5 Skincare Essentials Worth the Hype</h3>
+                    <p class="blog-excerpt">We put the internet's most viral skincare products to the test. Here are the 5 that actually deliver results.</p>
+                    <a href="#" class="read-more">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <div style="overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800" alt="Tech gadgets">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Oct 12, 2026</span>
+                        <span><i class="far fa-folder"></i> Electronics</span>
+                    </div>
+                    <h3 class="blog-title">Noise-Cancelling Headphones Showdown</h3>
+                    <p class="blog-excerpt">Sony vs. Bose vs. Apple. We break down the pros, cons, and which pair is right for your lifestyle.</p>
+                    <a href="#" class="read-more">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="footer-logo-img"></a>
+                    <p>Your ultimate guide to the best products on Amazon. We curate, so you don't have to search.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop All</a>
+                        <a href="deals.html">Daily Deals</a>
+                        <a href="categories.html">Categories</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Me</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclosure">
+                <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+                <p style="margin-top: 10px;">&copy; 2026 StyleSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
