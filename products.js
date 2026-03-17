@@ -64,19 +64,19 @@ id: "ELEC-002",
 
     // Fashion & Accessories
     {
-        id: "FASH-001",
-        name: "Minimalist White Ceramic Watch",
-        price: "185.00",
+        id: "FASH-0010",
+        name: "Good Molecules Yerba Mate Wake Up Eye Gel - Hydrating Under Eye Gel Cream with Hyaluronic Acid and Caffeine - Target Dark Circles and Puffiness - Skin Care for Face",
+        price: "PKR1,666.76",
         oldPrice: null,
-        category: "Accessories",
-        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+        category: "Beauty",
+        image: "https://m.media-amazon.com/images/I/71QsFtfDUCL._SL1500_.jpg",
         tag: "Premium",
         badgeClass: "new",
-        amazonLink: "#",
+        amazonLink: "https://amzn.to/40Clp79",
         rating: 4.6,
         reviewCount: "1,240",
-        desc: "A sleek, timeless design suitable for both formal and casual occasions.",
-        features: ["Water resistant 3ATM", "Genuine Leather Strap", "Japanese Quartz Movement"]
+        desc: "Infused with powerful ingredients like Yerba Mate, Hyaluronic Acid, and Caffeine, it helps to deeply hydrate the under-eye area while improving skin texture and brightness. The cooling gel formula absorbs quickly, leaving your skin feeling fresh, smooth, and energized.",
+        features: ["Reduces dark circles & puffiness"]
     },
     {
         id: "FASH-002",
