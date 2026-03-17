@@ -47,37 +47,19 @@ id: "ELEC-002",
     "Great gift option"
   ]
 },
-
-    
-    {
-        id: "ELEC-078",
-        name: "Anne Klein Women's Genuine Diamond Dial Bangle Watch",
-        price: " PKR19,713.73",
-        oldPrice: null,
-        category: "Jewelry",
-        image: "https://m.media-amazon.com/images/I/81iAfA+bwbL._AC_SY679_.jpg",
-        tag: "Trending",
-        badgeClass: "new",
-        amazonLink: "https://amzn.to/40w33Vv",
-        rating: 4.6,
-        reviewCount: "8,920",
-        desc: "Mineral crystal lens. Light rose gold-tone dial with genuine diamond at 12 o'clock. Rose gold-tone hands and markers. Rose gold-tone open bangle with adjustable end links, jewelry clasp, and extender. Water resistant to 100 feet (30M).",
-      
-    },
     {
         id: "ELEC-00",
-        name: "Professional Mirrorless Camera Toolkit",
-        price: "1249.00",
-        oldPrice: "1450.00",
-        category: "Electronics",
-        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+        name: "Glamnetic Press On Nails - Frosted Cranberry | Short Almond Fake Nails in Deep Red with Jelly Finish, Salon Quality Holiday Nails | 15 Sizes - 30 Nail Kit with Glue",
+        price: "PKR5,022.63 ",
+        category: "Jewelry",
+        image: "https://m.media-amazon.com/images/I/616jaPJhuCL._SL1500_.jpg",
         tag: "15% OFF",
         badgeClass: "sale",
-        amazonLink: "#",
+        amazonLink: "https://amzn.to/40xaxaN",
         rating: 4.9,
         reviewCount: "2,100",
-        desc: "Capture every moment in stunning detail with this robust, high-performance mirrorless camera.",
-        features: ["24.2 MP Full-Frame", "4K Video Recording", "Fast Hybrid AF"]
+        desc: "Upgrade your style and daily routine with this high-quality product designed for comfort, durability, and modern use.",
+        features: ["Styling avalible in different colors"]
     },
 
     // Fashion & Accessories
