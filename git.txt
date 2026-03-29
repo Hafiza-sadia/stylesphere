@@ -1,0 +1,100 @@
+Great 👍 ye basic but important step hai — GitHub update karna 👇
+
+---
+
+## 🔥 Step-by-Step: Website update on GitHub
+
+### 🔹 Step 1: Project folder open karo
+
+Apni website ka folder open karo (jahan files hain)
+
+---
+
+### 🔹 Step 2: Changes save karo
+
+Jo bhi tumne changes kiye:
+👉 HTML / CSS / JS files **save (Ctrl + S)** kar lo
+
+---
+
+### 🔹 Step 3: Git Bash / Terminal open karo
+
+Folder ke andar right click → **Git Bash** open karo
+
+---
+
+### 🔹 Step 4: Commands run karo
+
+```bash
+git add .
+```
+
+👉 ye sab changes select karega
+
+---
+
+```bash
+git commit -m "updated website design"
+```
+
+👉 ye changes save karega with message
+
+---
+
+```bash
+git push
+```
+
+👉 ye GitHub pe upload karega 🚀
+
+---
+
+## 🔹 Step 5: Website refresh karo
+
+Agar tum GitHub Pages use kar rahi ho:
+
+👉 1–2 min wait karo
+👉 phir apni site open karo (refresh)
+
+---
+
+## ⚠️ Common Problems
+
+### ❌ Error: “nothing to commit”
+
+👉 matlab file save nahi hui → dobara save karo
+
+---
+
+### ❌ Changes show nahi ho rahe
+
+👉 Hard refresh karo:
+**Ctrl + Shift + R**
+
+---
+
+### ❌ Git push error
+
+👉 pehli dafa ho to:
+
+```bash
+git push origin main
+```
+
+---
+
+## 💡 Pro Tip
+
+Har update ke liye message change karo:
+
+* "fix product page"
+* "added affiliate links"
+* "improved UI"
+
+---
+
+Agar chaho to main tumhe:
+✅ GitHub + Netlify auto update setup
+✅ ya ek click deploy system
+
+bhi bana ke de sakta hoon 👍

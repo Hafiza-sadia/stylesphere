@@ -94,6 +94,20 @@ id: "ELEC-002",
         features: ["Polarized Lenses", "UV400 Protection", "Lightweight Frame"]
     },
 
+    {
+        id: "FASH-067",
+        name: "Toddler Girl Princess Tutu Dress",
+        price: "$30.98",
+        
+        category: "Baby collection",
+        image: "https://m.media-amazon.com/images/I/716UTr8m2zL._AC_SY879_.jpg",
+        tag: "Deal",
+        badgeClass: "sale",
+        amazonLink: "https://amzn.to/4szhLHu",
+        rating: 4.5,
+        reviewCount: "3,400",
+        desc: "This adorable toddler girl tutu dress is made with soft, breathable fabric for all-day comfort 💖 Featuring a high waist design, mesh puff sleeves, and a princess-style tulle skirt, it’s perfect for birthdays, parties, and special occasions. Ideal for girls aged 2–6 years.",
+    },
     // Home & Kitchen
     {
         id: "HOME-001",
