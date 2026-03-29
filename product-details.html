@@ -70,7 +70,7 @@
     <!-- NAVIGATION -->
     <nav>
         <div class="container nav-flex">
-            <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="logo-img"></a>
+            <a href="index.html" class="logo-link"><img src="logo.jpeg" alt="StyleSphere Logo" class="logo-img"></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop All</a></li>
@@ -104,7 +104,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo-link"><img src="logo.png" alt="StyleSphere Logo" class="footer-logo-img"></a>
+                    <a href="index.html" class="logo-link"><img src="logo.jpeg" alt="StyleSphere Logo" class="footer-logo-img"></a>
                     <p>Your ultimate guide to the best products on Amazon. We curate, so you don't have to search.</p>
                 </div>
                 
@@ -154,6 +154,9 @@
 
             if (product) {
                 const oldPriceHtml = product.oldPrice ? `<span class="price-old" style="margin-left: 15px;">$${product.oldPrice}</span>` : '';
+                const productFeatures = Array.isArray(product.features) && product.features.length
+                    ? product.features
+                    : ['Product details will be updated soon.'];
                 
                 // Document Title
                 document.title = `StyleSphere | ${product.name}`;
@@ -184,7 +187,7 @@
                             
                             <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">Key Features</h3>
                             <ul class="feature-list">
-                                ${product.features.map(f => `<li><i class="fas fa-check-circle"></i><span>${f}</span></li>`).join('')}
+                                ${productFeatures.map(f => `<li><i class="fas fa-check-circle"></i><span>${f}</span></li>`).join('')}
                             </ul>
                             
                             <div style="margin-top: 40px; padding: 30px; background: white; border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow-lg);">
