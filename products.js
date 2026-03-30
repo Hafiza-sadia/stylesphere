@@ -125,6 +125,23 @@ id: "ELEC-002",
     },
 
 
+
+
+     {
+        id: "FASH-071",
+        name: "VelvetSkin Matte BB Elixir",
+        price: "$26.00",
+        
+        category: "Beauty products",
+        image: "https://m.media-amazon.com/images/I/61XlMqlMEiL._SL1500_.jpg",
+        tag: "Deal",
+        badgeClass: "sale",
+        amazonLink: "https://amzn.to/4m13DV2",
+        rating: 4.5,
+        reviewCount: "3,400",
+        desc: "The Erborian BB Cream Matte Beauty Balm SPF 20 is a perfect blend of Korean skincare and makeup, designed to give your skin a smooth, flawless, and natural matte finish. This lightweight formula helps even out skin tone, conceal imperfections, and control excess shine without feeling heavy on the skin.",
+    },
+
     // Home & Kitchen
     {
         id: "HOME-001",
